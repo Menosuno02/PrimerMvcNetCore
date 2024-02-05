@@ -3,4 +3,13 @@
     <li>
         <a asp-controller="Informacion" asp-action="ControladorVista">Controlador --> Vista</a>
     </li>
+    <li>
+        @Html.ActionLink("Vista --> Controlador", "VistaControladorGet", "Informacion", new { app = "MVC NET Core", version = 1 })
+    </li>
+    <li>
+        @Html.ActionLink("Vista --> Controlador sin param", "VistaControladorGet", "Informacion")
+    </li>
+    <li>
+        <a asp-controller="Informacion" asp-action="VistaControladorPost">VistaControladorPost</a>
+    </li>
 </ul>
