@@ -1,0 +1,22 @@
+﻿@model List<int>
+
+<h1>Tabla Multiplicar Simple</h1>
+
+<form method="post">
+    <label>Número</label>
+    <input type="number" class="form-control" name="numero" />
+    <button class="btn btn-primary mt-3">Calcular tabla</button>
+</form>
+
+@if (Model is not null)
+{
+    <hr />
+    <table class="table">
+        <tbody>
+            @foreach(int numero in Model)
+            {
+                <td>@numero</td>
+            }
+        </tbody>
+    </table>
+}

@@ -45,5 +45,21 @@ namespace PrimerMvcNetCore.Controllers
             }
             return View(numeros);
         }
+
+        public IActionResult TablaMultiplicarSimple()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult TablaMultiplicarSimple(int numero)
+        {
+            List<int> numeros = new List<int>();
+            for (int i = 1; i <= 10; i++)
+            {
+                numeros.Add(numero * i);
+            }
+            return View(numeros);
+        }
     }
 }
