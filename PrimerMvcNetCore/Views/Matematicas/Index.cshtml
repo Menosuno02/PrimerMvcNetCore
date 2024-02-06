@@ -2,7 +2,7 @@
 
 <ul>
     <li>
-        @Html.ActionLink("Sumar números GET (2 + 4)", "SumarNumerosGet", "Matematicas", new {numero1 = 2, numero2 = 4})
+        @Html.ActionLink("Sumar números GET (2 + 4)", "SumarNumerosGet", "Matematicas", new { numero1 = 2, numero2 = 4 })
     </li>
     <li>
         @Html.ActionLink("Sumar números GET (15 + 3)", "SumarNumerosGet", "Matematicas", new { numero1 = 15, numero2 = 3 })
@@ -14,6 +14,9 @@
         <a asp-controller="Matematicas" asp-action="ConjeturaCollatz">Conjetura Collatz</a>
     </li>
     <li>
-        <a asp-controller="Matematicas" asp-action="TablaMultiplicarSimple">Tabla Multiplicación</a>
+        <a asp-controller="Matematicas" asp-action="TablaMultiplicarSimple">Tabla Multiplicar Simple</a>
+    </li>
+    <li>
+        <a asp-controller="Matematicas" asp-action="TablaMultiplicarModel">Tabla Multiplicar Model</a>
     </li>
 </ul>

@@ -11,11 +11,28 @@
 @if (Model is not null)
 {
     <hr />
+    <p class="fw-bold">Con FOR</p>
     <table class="table">
         <tbody>
-            @foreach(int numero in Model)
+            @for (int i = 1; i <= Model.Count; i++)
             {
-                <td>@numero</td>
+                int numero = Model[0];
+                int result = Model[i - 1];
+                <tr>
+                    <td>@numero x @i</td>
+                    <td>@result</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p class="fw-bold">Con FOREACH</p>
+    <table class="table">
+        <tbody>
+            @foreach (int numero in Model)
+            {
+                <tr>
+                    <td>@numero</td>
+                </tr>
             }
         </tbody>
     </table>

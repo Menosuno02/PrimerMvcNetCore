@@ -1,0 +1,26 @@
+﻿@model List<FilaTablaMultiplicar>
+
+<h1>Tabla Multiplicar Model</h1>
+
+<form method="post">
+    <label>Número</label>
+    <input type="number" class="form-control" name="numero" />
+    <button class="btn btn-primary mt-3">Cargar tabla</button>
+</form>
+
+@if (Model is not null)
+{
+    <hr />
+    <p class="fw-bold">CON MODEL</p>
+    <table class="table">
+        <tbody>
+            @foreach (FilaTablaMultiplicar fila in Model)
+            {
+                <tr>
+                    <td>@fila.Operacion</td>
+                    <td>@fila.Resultado</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
